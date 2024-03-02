@@ -1,13 +1,3 @@
-// kinetic_tournament.cpp
-// Eric K. Zhang; Aug. 29, 2020
-//
-// This is an implementation of a _kinetic tournament_, which I originally
-// learned about from Daniel Zhang in this Codeforces blog comment:
-// https://codeforces.com/blog/entry/68534#comment-530381
-//
-// The functionality of the data structure is a mix between a line container,
-// i.e., "convex hull trick", and a segment tree.
-//
 // Suppose that you have an array containing pairs of nonnegative integers,
 // A[i] and B[i]. You also have a global parameter T, corresponding to the
 // "temperature" of the data structure. Your goal is to support the following
@@ -41,7 +31,6 @@
 //   - update: O(log n)
 //   - heaten: O(log^2 n)  [amortized]
 //
-// Verification: FBHC 2020, Round 2, Problem D "Log Drivin' Hirin'"
 
 #include <bits/stdc++.h>
 using namespace std;
