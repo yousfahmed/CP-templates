@@ -141,6 +141,20 @@ struct SuffixArray {
     return ans;
   }
 
+  bool subStringSearch(string &s, string &pat) {
+    const int m = pat.size();
+    int l = 0, r = sa.size() - 1;
+    while (l <= r) {
+      int md = (l + r) / 2;
+      string t = s.substr(sa[md], min(n - sa[md], m));
+      if (t == pat)return true;
+      else if (t < pat) l = md + 1;
+      else r = md - 1;
+    }
+    return false;
+  }
+
+
 #undef pii
 #undef vvi
 #undef vi
