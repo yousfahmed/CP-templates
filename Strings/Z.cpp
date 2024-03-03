@@ -18,3 +18,16 @@ vector<int> z_function(string s) {
     }
     return z;
 }
+
+vector<int> search(string& S, string &pat) {
+  int N = S.size(), M = pat.size();
+  string combined = pat + S;
+  vector<int> Z = z_function(combined);
+  vector<int> matches;
+  for (int i = 0; i < N; i++) {
+    if (Z[M + i] >= M) {
+      matches.push_back(i);
+    }
+  }
+  return matches;
+}
